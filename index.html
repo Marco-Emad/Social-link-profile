@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: white; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(0, 0%, 8%);
+    }
+
+    .card{
+      background-color: hsl(0, 0%, 12%);
+      width: 40%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4rem;
+      border-radius: 10px;
+      font-family: Inter;
+      color: white;
+    }
+
+    .profile{
+      text-align: center;
+      padding-top: 3rem;
+    }
+
+    img{
+      width: 30%;
+      height: 30%;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .social-links{
+      display: grid;
+      margin: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    button{
+      padding: 1rem;
+      margin: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      background-color: hsl(0, 0%, 20%);
+      color: white;
+    }
+
+    button:hover{
+      background-color: hsl(75, 94%, 57%);
+      color: black;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="profile">
+      <img src="./assets/images/profile1.jpg">
+      <h2 style="font-weight: 400; margin: 3px; padding: 0px">Marco Emad</h2>
+    <p style="color: hsl(75, 94%, 57%); margin-top: 0px; font-size: 14px;">Egypt, New Cairo</p>
+    <p style="font-size: 0.8rem;">"Front-end developer and .NET developer"</p>
+    </div>
+    
+    <div class="social-links">
+      <button url ="https://github.com/Marco-Emad">GitHub</button>
+      <button url="https://www.frontendmentor.io/profile/Marco-Emad">Frontend Mentor</button>
+      <button url="https://www.linkedin.com/in/marcoemad/">LinkedIn</button>
+      <button url="https://www.facebook.com/profile.php?id=100004789448596">FaceBook</button>
+      <button url="">Instagram</button>
+    
+    </div>
+  </div>
+  
+  <script>
+    var buttons = document.querySelectorAll("button");
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var profileLink = this.getAttribute("url");
+            window.location.href = profileLink;
+        });
+    });
+</script>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Marco Emad</a>.
+  </div>
+</body>
+</html>
